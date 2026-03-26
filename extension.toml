@@ -8,7 +8,16 @@ authors = ["tsilvs <tsilvs542@gmail.com>"]
 themes = []
 icon_themes = []
 languages = []
-snippets = "./snippets/*.json"
+snippets = [
+	"./snippets/javascript.json",
+	"./snippets/json.json",
+	"./snippets/markdown.json",
+	"./snippets/org.json",
+	"./snippets/shell script.json",
+	"./snippets/snippets.json",
+	"./snippets/typescript.json",
+]
+
 capabilities = []
 
 [lib]

@@ -1,28 +1,21 @@
 {
 	"Shebang: Bash": {
 		"prefix": "!b",
-		"body": [
-			"#!/usr/bin/env bash"
-		],
+		"body": ["#!/usr/bin/env bash"],
 		"description": "Shebang: Bash"
 	},
 	"Function: Base": {
-		"prefix": "f()",
-		"body": [
-			"$1() {",
-			"\t$2 \"$@\"",
-			"\treturn $?",
-			"}"
-		],
+		"prefix": "fn",
+		"body": ["$1() {", "\t$2 \"\\$@\"", "\treturn \\$?", "}"],
 		"description": "Function: Base"
 	},
 	"Function: Full Feature": {
-		"prefix": "func()",
+		"prefix": "func",
 		"description": "Function with all important interface signatures.",
 		"body": [
 			"${1:function_name}() {",
 			"\tlocal deps=(${9:dependencies})",
-			"\tfor d in \"${deps[@]}\"; do",
+			"\tfor d in \"\\${deps[@]}\"; do",
 			"\t\tcommand -v \"\\$d\" >/dev/null 2>&1 || {",
 			"\t\t\techo \"Error: dependency missing: \\$d\" >&2",
 			"\t\t\treturn 127 2>/dev/null || exit 127",
@@ -30,7 +23,7 @@
 			"\tdone",
 			"\tlocal ${2:option}=\"${4:option_default}\"",
 			"",
-			"\tlocal usage=\"$(cat <<-EOF",
+			"\tlocal usage=\"\\$(cat <<-EOF",
 			"\t\tUsage: \\${FUNCNAME[0]} [OPTIONS]",
 			"\t\tDescription",
 			"\t\t",
@@ -39,7 +32,7 @@
 			"\t\t\t-h, --help              Show help",
 			"\t\t",
 			"\t\tExamples:",
-			"\t\t\t${FUNCNAME[0]}",
+			"\t\t\t\\${FUNCNAME[0]}",
 			"\tEOF",
 			"\t)\"",
 			"",
@@ -59,13 +52,13 @@
 			"",
 			"\trun_cmd() {",
 			"\t\tif (( dryrun )); then",
-			"\t\t\techo \"DRY-RUN: $@\"",
+			"\t\t\techo \"DRY-RUN: \\$@\"",
 			"\t\telse",
-			"\t\t\t\"$@\"",
+			"\t\t\t\"\\$@\"",
 			"\t\tfi",
 			"\t}",
 			"",
-			"\t(( showhelp )) && { echo -e \"${usage}\"; return 0; }",
+			"\t(( showhelp )) && { echo -e \"\\${usage}\"; return 0; }",
 			"",
 			"\tlocal other_option=\"\\${${2:option}:-${4:option_default}}\"",
 			"\t",
