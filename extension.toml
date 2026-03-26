@@ -1,0 +1,11 @@
+id = "snipas"
+name = "Snippets Assorted"
+description = "A collection of useful code snippets for various languages"
+version = "0.1.0"
+schema_version = 1
+authors = ["tsilvs"]
+repository = "https://github.com/tsilvs/snipas"
+issues = "https://github.com/tsilvs/snipas/issues"
+
+[snippets]
+directory = "snippets"

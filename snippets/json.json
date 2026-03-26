@@ -1,0 +1,30 @@
+{
+	"VSCode Snippet": {
+		"prefix": "vs:snip",
+		"description": "VSCode snippet JSON",
+		"body": [
+			"\"${1:key}\": {",
+			"\t\"scope\": \"${2:scope}\",",
+			"\t\"prefix\": \"${3:prefix}\",",
+			"\t\"description\": \"${4:description}\",",
+			"\t\"body\": [",
+			"\t\t\"${5:body}\",",
+			"\t]",
+			"},"
+		]
+	},
+	"Zed Snippet": {
+		"prefix": "zed:snip",
+		"description": "Zed snippet JSON template",
+		"body": [
+			"\"${1:Snippet Name}\": {",
+			"\t\"prefix\": \"${2:trigger}\",",
+			"\t\"description\": \"${5:description}\"",
+			"\t\"body\": [",
+			"\t\t\"${3:line 1}\",",
+			"\t\t\"${4:line 2}\"",
+			"\t],",
+			"}"
+		]
+	}
+}

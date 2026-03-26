@@ -1,40 +1,57 @@
-# Zed Snippets
+# Snipas - Snippets Assorted
 
-A collection of code snippets for the [Zed editor](https://zed.dev/).
+A collection of useful code snippets for the [Zed editor](https://zed.dev/), organized as a Zed extension.
 
 ## Installation
 
-Copy the snippet files to your Zed configuration directory:
+### As an Extension
+
+Clone this repository into your Zed extensions directory:
+
+```bash
+# Create extensions directory if it doesn't exist
+mkdir -p ~/.local/share/zed/extensions/installed
+
+# Clone the extension
+git clone https://github.com/tsilvs/snipas.git ~/.local/share/zed/extensions/installed/snipas
+```
+
+Restart Zed or reload the window to activate the extension.
+
+### Manual Installation
+
+Copy individual snippet files to your Zed configuration directory:
 
 ```bash
 # Create the snippets directory if it doesn't exist
 mkdir -p ~/.config/zed/snippets
 
-# Copy all snippet files
-cp *.json ~/.config/zed/snippets/
+# Copy snippet files
+cp snippets/*.json ~/.config/zed/snippets/
 ```
-
-Or you can clone the directory into `~/.local/share/zed/extensions/installed/`
 
 Alternatively, use the `snippets: open folder` action in Zed to navigate to the snippets directory.
 
-## File Structure
+## Directory Structure
 
-Zed uses pure JSON format for snippets (no comments). Each file is named according to the language scope:
-
-| File                | Language Scope                      |
-| ------------------- | ----------------------------------- |
-| `snippets.json`     | Global (available in all languages) |
-| `javascript.json`   | JavaScript & JSX                    |
-| `typescript.json`   | TypeScript                          |
-| `markdown.json`     | Markdown                            |
-| `org.json`          | Org mode                            |
-| `shell script.json` | Shell Script                        |
-| `json.json`         | JSON                                |
+```
+snipas/
+├── snippets/
+│   ├── snippets.json         # Global snippets
+│   ├── javascript.json       # JavaScript & JSX
+│   ├── typescript.json       # TypeScript
+│   ├── markdown.json         # Markdown
+│   ├── org.json              # Org mode
+│   ├── shell script.json     # Shell Script
+│   └── json.json             # JSON
+├── extension.toml            # Extension manifest
+├── LICENSE
+└── README.md
+```
 
 ## Snippet Format
 
-Each snippet follows this structure:
+Zed uses pure JSON format for snippets (no comments). Each snippet follows this structure:
 
 ```json
 {
@@ -111,10 +128,6 @@ If the snippet contains the `$` symbol outside of a placeholder, it must be esca
 
 - Only the first prefix is used when a list of prefixes is provided
 - Currently only JSON snippet file format is supported
-
-## Contributing
-
-Feel free to add more snippets! Just follow the existing format and naming conventions.
 
 ## License
 
