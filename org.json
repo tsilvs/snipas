@@ -1,0 +1,67 @@
+{
+	"Src block": {
+		"prefix": "!+s",
+		"body": [
+			"#+BEGIN_SRC",
+			"$1",
+			"#+END_SRC",
+			"#+RESULTS:",
+			"$2"
+		],
+		"description": "Src block"
+	},
+	"Quote block": {
+		"prefix": "!+q",
+		"body": [
+			"#+BEGIN_QUOTE",
+			"$1",
+			"#+END_QUOTE"
+		],
+		"description": "Quote block"
+	},
+	"Example block": {
+		"prefix": "!+e",
+		"body": [
+			"#+BEGIN_EXAMPLE",
+			"$1",
+			"#+END_EXAMPLE"
+		],
+		"description": "Example block"
+	},
+	"Verse block": {
+		"prefix": "!+v",
+		"body": [
+			"#+BEGIN_VERSE",
+			"$1",
+			"#+END_VERSE"
+		],
+		"description": "Verse block"
+	},
+	"Note block": {
+		"prefix": "!+n",
+		"body": [
+			"#+BEGIN_NOTE",
+			"$1",
+			"#+END_NOTE"
+		],
+		"description": "Note block"
+	},
+	"Warning block": {
+		"prefix": "!+w",
+		"body": [
+			"#+BEGIN_WARNING",
+			"$1",
+			"#+END_WARNING"
+		],
+		"description": "Warning block"
+	},
+	"Comment block": {
+		"prefix": "!+c",
+		"body": [
+			"#+BEGIN_COMMENT",
+			"$1",
+			"#+END_COMMENT"
+		],
+		"description": "Comment block"
+	}
+}

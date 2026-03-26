@@ -1,0 +1,109 @@
+{
+	"Note admonition": {
+		"prefix": "!n",
+		"body": [
+			"> [!NOTE]",
+			"> $1"
+		],
+		"description": "Note block"
+	},
+	"Tip admonition": {
+		"prefix": "!t",
+		"body": [
+			"> [!TIP]",
+			"> $1"
+		],
+		"description": "Tip block"
+	},
+	"Important admonition": {
+		"prefix": "!i",
+		"body": [
+			"> [!IMPORTANT]",
+			"> $1"
+		],
+		"description": "Important block"
+	},
+	"Caution admonition": {
+		"prefix": "!c",
+		"body": [
+			"> [!CAUTION]",
+			"> $1"
+		],
+		"description": "Caution block"
+	},
+	"Warning admonition": {
+		"prefix": "!w",
+		"body": [
+			"> [!WARNING]",
+			"> $1"
+		],
+		"description": "Warning block"
+	},
+	"Embed Media": {
+		"prefix": "!!m",
+		"body": [
+			"![$3]($1 \"$2\")"
+		],
+		"description": "Embed media"
+	},
+	"Code block": {
+		"prefix": "!`",
+		"body": [
+			"```$1",
+			"$2",
+			"```"
+		],
+		"description": "Preformatted code block"
+	},
+	"Foldable block": {
+		"prefix": "!!fold",
+		"body": [
+			"<details>",
+			"\t<summary>",
+			"$1",
+			"\t</summary>",
+			"",
+			"$2",
+			"",
+			"</details>"
+		],
+		"description": "HTML Details + Summary Foldable block"
+	},
+	"ASCII Art Layout Guard Style": {
+		"prefix": "ascii:style",
+		"description": "ASCII Art Wrap & Scroll fix style",
+		"body": [
+			"<style>",
+			"\tdiv.over-scroll:not(#spec-hak) pre > code {",
+			"\t\twhite-space: pre;",
+			"\t\toverflow-x: auto;",
+			"\t\tword-break: normal;",
+			"\t\toverflow-wrap: normal;",
+			"\t}",
+			"",
+			"\tdiv.over-scroll:not(#spec-hak) pre {",
+			"\t\twhite-space: pre;",
+			"\t}",
+			"</style>"
+		]
+	},
+	"ASCII Art Code block": {
+		"prefix": "ascii:block",
+		"description": "ASCII Art Code Block",
+		"body": [
+			"<div class=\"over-scroll\">",
+			"",
+			"```text",
+			"                                                                                                                 ",
+			"                                                                                                                 ",
+			"                                                                                                                 ",
+			"                                                                                                                 ",
+			"                                                                                                                 ",
+			"                                                                                                                 ",
+			"                                                                                                                 ",
+			"```",
+			"",
+			"</div>"
+		]
+	}
+}

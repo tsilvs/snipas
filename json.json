@@ -1,0 +1,16 @@
+{
+	"VSCode Snippet": {
+		"prefix": "vs:snip",
+		"description": "VSCode snippet JSON",
+		"body": [
+			"\"${1:key}\": {",
+			"\t\"scope\": \"${2:scope}\",",
+			"\t\"prefix\": \"${3:prefix}\",",
+			"\t\"description\": \"${4:description}\",",
+			"\t\"body\": [",
+			"\t\t\"${5:body}\",",
+			"\t]",
+			"},"
+		]
+	}
+}

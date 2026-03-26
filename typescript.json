@@ -1,0 +1,18 @@
+{
+  "Function (arrow, 1)": {
+    "prefix": "f()",
+    "body": [
+      "($1) => $2"
+    ],
+    "description": "Arrow function"
+  },
+  "Function (arrow, 2)": {
+    "prefix": "fn()",
+    "body": [
+      "($1) => {",
+      "\t$2",
+      "}"
+    ],
+    "description": "Arrow function"
+  }
+}
