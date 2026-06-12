@@ -9,6 +9,15 @@
 		"body": ["$1() {", "\t$2 \"\\$@\"", "\treturn \\$?", "}"],
 		"description": "Function: Base"
 	},
+	"Function: Import/Export": {
+		"prefix": "fnix",
+		"description": "Function: Import/Export",
+		"body": [
+			"source \"\\$(dirname \"\\${BASH_SOURCE[0]}\")/$1\"",
+			"",
+			"export -f $2"
+		]
+	},
 	"Function: Full Feature": {
 		"prefix": "func",
 		"description": "Function with all important interface signatures.",

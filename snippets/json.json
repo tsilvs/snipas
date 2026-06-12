@@ -19,10 +19,10 @@
 		"body": [
 			"\"${1:Snippet Name}\": {",
 			"\t\"prefix\": \"${2:trigger}\",",
-			"\t\"description\": \"${5:description}\"",
+			"\t\"description\": \"${3:description}\",",
 			"\t\"body\": [",
-			"\t\t\"${3:line 1}\",",
-			"\t\t\"${4:line 2}\"",
+			"\t\t\"${4:line 1}\",",
+			"\t\t\"${5:line 2}\"",
 			"\t],",
 			"}"
 		]
